@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textpassword = new System.Windows.Forms.TextBox();
-            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.checkpassword = new System.Windows.Forms.CheckBox();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,6 +58,17 @@
             this.panel1.Size = new System.Drawing.Size(656, 98);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Image = global::InventoryManagementSystem.Properties.Resources.close2_;
+            this.btnClose.Location = new System.Drawing.Point(629, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(27, 28);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClose.TabIndex = 9;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pictureBox2
             // 
@@ -115,18 +127,18 @@
             this.textpassword.TabIndex = 3;
             this.textpassword.UseSystemPasswordChar = true;
             // 
-            // btnSubmit
+            // btnLogin
             // 
-            this.btnSubmit.BackColor = System.Drawing.Color.Red;
-            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.Color.FloralWhite;
-            this.btnSubmit.Location = new System.Drawing.Point(187, 365);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(280, 31);
-            this.btnSubmit.TabIndex = 5;
-            this.btnSubmit.Text = "SUBMIT";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.Red;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.FloralWhite;
+            this.btnLogin.Location = new System.Drawing.Point(187, 365);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(280, 31);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -164,26 +176,26 @@
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // btnClose
+            // label5
             // 
-            this.btnClose.Image = global::InventoryManagementSystem.Properties.Resources.close2_;
-            this.btnClose.Location = new System.Drawing.Point(629, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(27, 28);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnClose.TabIndex = 9;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(515, 469);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(129, 16);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "@copyright SHOPRITE";
             // 
             // Loginform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 508);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.checkpassword);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textpassword);
             this.Controls.Add(this.label1);
@@ -193,10 +205,11 @@
             this.Name = "Loginform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Loginform_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,13 +222,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textpassword;
-        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkpassword;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.PictureBox btnClose;
+        private System.Windows.Forms.Label label5;
     }
 }
 

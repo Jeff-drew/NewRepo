@@ -68,7 +68,7 @@ namespace InventoryManagementSystem
                 if(MessageBox.Show("Are you sure you want to delete this user?", "Delete record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     con.Open();
-                    cm = new SqlCommand("DELETE FROM usertable WHERE phone LIKE '"+dgvUser.Rows[e.RowIndex].Cells[1].Value.ToString()+"'", con);
+                    cm = new SqlCommand("DELETE FROM usertable WHERE username LIKE '"+dgvUser.Rows[e.RowIndex].Cells[1].Value.ToString()+"'", con);
                     cm.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("Successfully deleted data!");
@@ -84,10 +84,16 @@ namespace InventoryManagementSystem
             userModule.btnS.Enabled = true;
             userModule.btnU.Enabled = false;
             userModule.ShowDialog();
+            LoadUser();
 
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

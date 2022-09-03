@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,9 @@ namespace InventoryManagementSystem
 {
     public partial class Loginform : System.Windows.Forms.Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\New User\Documents\DB.mdf"";Integrated Security=True;Connect Timeout=30");
+        SqlCommand cm = new SqlCommand();
+        SqlDataReader dr;
         public Loginform()
         {
             InitializeComponent();
@@ -19,7 +23,33 @@ namespace InventoryManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                cm = new SqlCommand("SELECT * FROM usertable WHERE username = @username AND password = @password", con);
+                cm.Parameters.AddWithValue("@username", textname.Text);
+                cm.Parameters.AddWithValue("@password", textpassword.Text);
+                con.Open();
+                dr = cm.ExecuteReader();
+                dr.Read();
 
+                if (dr.HasRows)
+                {
+                   MessageBox.Show("Welcome " + dr["fullname"].ToString() + " | " , "ACCESS GRANTED!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   MainForm main =new MainForm();
+                   this.Hide();
+                   main.ShowDialog();
+                  
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username or Password!" , "ACCESS DENIED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -66,6 +96,11 @@ namespace InventoryManagementSystem
             {
                 Application.Exit();
             }
+        }
+
+        private void Loginform_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

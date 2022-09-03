@@ -128,8 +128,12 @@ namespace InventoryManagementSystem
         private void button1_Click(object sender, EventArgs e)
         {
             try
-            {
-                if (MessageBox.Show("Are you sure you want to add this user?", "Saving Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.OK)
+            {   if(txtP.Text != txtCP.Text)
+                {
+                    MessageBox.Show("Password doesn't match", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (MessageBox.Show("Are you sure you want to add this user?", "Saving Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cm= new SqlCommand("INSERT INTO usertable(username,fullname,password,phone)VALUES(@username,@fullname,@password,@phone)", con);
                     cm.Parameters.AddWithValue("@username", txtU.Text);
@@ -158,12 +162,15 @@ namespace InventoryManagementSystem
         {
             Clear();
             Erase();
+            btnS.Enabled = true;
+            btnU.Enabled = false;
         }
         public void Erase()
         {
             txtU.Clear();
             txtF.Clear();
             txtP.Clear();
+            txtCP.Clear();  
             txtPh.Clear();
         }
 
@@ -171,7 +178,12 @@ namespace InventoryManagementSystem
         {
             try
             {
-                if (MessageBox.Show("Are you sure you update to add this user?", "Updating Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.OK)
+                if(txtP.Text != txtCP.Text)
+                {
+                    MessageBox.Show("Password doesn't match", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (MessageBox.Show("Are you sure you to update this user?", "Updating Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cm = new SqlCommand("UPDATE usertable SET  fullname = @fullname, password = @password, phone = @phone WHERE username LIKE '"+ txtU.Text + "' ", con);
                     cm.Parameters.AddWithValue("@fullname", txtF.Text);

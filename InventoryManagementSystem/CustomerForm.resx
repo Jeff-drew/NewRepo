@@ -126,9 +126,6 @@
   <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -162,44 +159,7 @@
         Jy+HWaI4m/TLAWNSyi3ya+kA32gFr524ZEG1z0U4zg/0h28/gjoUxAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="dBDataSetBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>313, 17</value>
-  </metadata>
-  <metadata name="dBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="dBDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>126, 17</value>
-  </metadata>
-  <data name="btnAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAaNJREFUSEvt
-        VstKA0EQjEaPgop69KIXHzdF8Usi/oXo3ySo/+TjHFAUNRiP7s4MbfXSMu6kd9wdZANiQUHY6a7a6e30
-        TOcfMRBRN6f8wFp77Fx+ysTvHj/jNQn7PWSU7VhnB9aZF5Aq+IyYPlG2LWnpwC5WrMuvIGoDkxgRay+Q
-        uywyzYDy7UPkIRBtwnto7IlcPXC5kPgeCKVwDK0tkY0DJVpDeYeKSCLzITRXRb4a/H10gQm+CbW1gLYv
-        8jrQvbsIrNVI/DmIPja0NYU22u14s0slSSWwyNTWdNqB2JQBkXkEjCcTdDY3NiPEz4mdhyFzpARXMsGY
-        8Pc6FDsPjL4TLbiKKcY8asXOwzlzpgY78wqDdQn7ERyLnMdAoyDPdgnzgPG5FgzCmDuYlgLOCIPnxfAZ
-        BRoFeXNi59FSqXti5zG15oJIF4uxY6/EBOMnxM+KXRlTGSCM5iOzaCR1PWB8ZDLwZu0fEgxsZQFtf6ML
-        NCe0rllT5OOQErZ7EfgCjrxN48ydIlaLyL3lY1PkmgElav+y9x2tX29DYBftXuj/EDqdT6y62tW8h8PU
-        AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnAdd.ImageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAkhJREFUSEvN
-        l81OFEEUhSchMq6RiIFEF8a3ABegEkLiS2h0r658AQ0gexI0GoVE4sqoiQlE488ruPEnrmGhRInYVUXz
-        3Zoz4wy0TDe0jSeppO7pe++5faequqb23yNN017n3LgL7rYPyaL37l0czI3j2QXzkfvBQbJTPvh7Prh1
-        xipCCwjdCcHdtGHzWEhwaw0fP0/MSYUXB8F1kk6RbNNvuacudSNwPXq8C/YMn7P4PiPml3UBrlgHCDhB
-        G99T/SdaOCo6N4g5R+wXcrwl14DovRFFQ/KVyleYHxNdGMT2I/zaCmB+XHQ2cKjHN91yy8yPiN43LAf5
-        XjHe7JmP32WGCj/i1CfqwCBXPzk/k/uWqE6k6eYZFkXCAhkWVRriogvuNxqnRf0Bv+t9WvxcZukg90ve
-        /K7MBmjHUSr6UWQFe59csiGzK8h9Ho11tOqiLIm/CLkK+dd9uhNUP2dDZldYbjTW0JoUFRcVB0XyWGYu
-        FBU20O4ndrDItCTxvJ2WmQv7EUbDjtdHMknCRufcvS4zEyEkV6l4qTXYInG0cfhckXsm0Lhh+1pmS/ia
-        zEywkC4339IG1X+w0c6Zj9wzYS/XKdz44szIzIWmmMxcQGMWrYcyIzF9OIvL+wmW+jeWfO7PWFFhy43G
-        d9vPoloHyE/IMVFdUcoBYqDVD2jFC5mlg9y7j0wDlQxR0UZHK0qCfsoNNAZFdcJWNlVV+1k0WP/ZZ9Vf
-        BAw4VH/1aSKKV33Za4KA6q+37SC42gv9Tlj1tLC6vzD/BrXaNnk8MgX15/+VAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnAdd.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnpictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAaNJREFUSEvt
         VstKA0EQjEaPgop69KIXHzdF8Usi/oXo3ySo/+TjHFAUNRiP7s4MbfXSMu6kd9wdZANiQUHY6a7a6e30
@@ -235,7 +195,4 @@
         Jy+HWaI4m/TLAWNSyi3ya+kA32gFr524ZEG1z0U4zg/0h28/gjoUxAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
-  </metadata>
 </root>
